@@ -1,33 +1,26 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "./Navbar.css";
+import logo from "../assets/Screenshot_2025-08-12_110952-removebg-preview.png"; // adjust path
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="logo">MyWebsite</div>
-
-      <div
-        className={`hamburger ${isOpen ? "open" : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className="navbar-logo">
+        <img src={logo} alt="Logo" />
+        <h1>
+          BHARATH <span className="cement-text">CEMENT</span>
+        </h1>
       </div>
-
-      <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-        <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-        <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
-        <li><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
-        <li><Link to="/products" onClick={() => setIsOpen(false)}>Products</Link></li>
-        <li><Link to="/brands" onClick={() => setIsOpen(false)}>Brands</Link></li>
-        <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+      <ul className="navbar-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;

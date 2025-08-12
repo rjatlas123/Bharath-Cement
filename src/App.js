@@ -1,9 +1,9 @@
-
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Services from './components/Services';
-import About from './components/About'; // Importing the About component
+import About from './components/About';
 import Product from './components/Product';
 import Brand from './components/Brand';
 import Contact from './components/Contact';
@@ -12,17 +12,19 @@ import ChatBot from './components/Chatbot';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <ChatBot />
-      <Home />
-      <About />
-      <Services />
-      <Product />
-      <Brand />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <ChatBot />
+        <Home />
+        <About />
+        <Services />
+        <Product />
+        <Brand />
+        <Contact />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
