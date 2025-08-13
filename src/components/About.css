@@ -82,18 +82,48 @@
   box-shadow: 0 6px 16px rgba(255, 254, 254, 0.15);
 }
 
-/* Responsive */
+/* Tablet */
+@media (max-width: 1024px) {
+  .about {
+    gap: 20px;
+    padding: 40px 15px;
+  }
+  .about-title {
+    font-size: 28px;
+  }
+  .about-subtitle {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
     text-align: center;
   }
-
   .about-image {
     margin-top: 20px;
   }
-
   .about-section {
     text-align: left;
+  }
+}
+
+/* Small Mobile (extra tweaks) */
+@media (max-width: 480px) {
+  .about {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+  .about-title {
+    font-size: 24px;
+  }
+  .about-subtitle {
+    font-size: 16px;
+  }
+  .about-section p,
+  .about-section ul {
+    font-size: 14px;
   }
 }
