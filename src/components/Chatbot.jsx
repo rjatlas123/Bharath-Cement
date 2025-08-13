@@ -17,11 +17,16 @@ const ChatBot = () => {
     setMessages([...messages, { from: "user", text: input }]);
     setInput("");
 
-    // Example bot auto-response (static for now)
+    // Show WhatsApp Me button instead of static message
     setTimeout(() => {
       setMessages(prev => [
         ...prev,
-        { from: "bot", text: "Thank you for your query! Our team will get back to you soon." }
+        {
+          from: "bot",
+          isButton: true,
+          buttonText: "WhatsApp Me",
+          link: "https://wa.me/919876543210" // Replace with your WhatsApp number
+        }
       ]);
     }, 800);
   };
@@ -38,7 +43,18 @@ const ChatBot = () => {
           <div className="chat-body">
             {messages.map((msg, i) => (
               <div key={i} className={`message ${msg.from}`}>
-                {msg.text}
+                {msg.isButton ? (
+                  <a
+                    href={msg.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-btn"
+                  >
+                    {msg.buttonText}
+                  </a>
+                ) : (
+                  msg.text
+                )}
               </div>
             ))}
           </div>

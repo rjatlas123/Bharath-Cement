@@ -20,7 +20,7 @@ const Brand = () => {
   ];
 
   return (
-    <div className="brand-section">
+    <div className="brand-section" id="brands">
       <h2 className="brand-heading">Our Brand Collaborations</h2>
       <div className="brand-grid">
         {brands.map((logo, index) => (

@@ -6,6 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* Chat toggle (floating button) */
 .chat-toggle {
   background: orange;
   color: white;
@@ -20,6 +21,7 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* Chat window container */
 .chat-window {
   width: 300px;
   height: 400px;
@@ -31,6 +33,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* Chat header */
 .chat-header {
   background: orange;
   color: white;
@@ -44,6 +47,7 @@
   cursor: pointer;
 }
 
+/* Chat body messages */
 .chat-body {
   flex: 1;
   padding: 10px;
@@ -69,6 +73,7 @@
   align-self: flex-end;
 }
 
+/* Input section */
 .chat-input {
   display: flex;
   border-top: 1px solid #ddd;
@@ -89,6 +94,7 @@
   cursor: pointer;
 }
 
+/* Quick reply buttons */
 .quick-replies {
   display: flex;
   flex-wrap: wrap;
@@ -104,6 +110,22 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
+}
+
+/* ✅ WhatsApp Button Style */
+.whatsapp-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
 }
 
 /* ✅ Mobile Responsive Adjustments */

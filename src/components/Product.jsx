@@ -6,7 +6,7 @@ import bricksImage from "../assets/others.jpg.jpg";
 
 const Product = () => {
   return (
-    <div className="products-wrapper">
+    <div className="products-wrapper" id="products">
       <h2 className="section-title">Our Products</h2>
 
       {/* Product Images */}

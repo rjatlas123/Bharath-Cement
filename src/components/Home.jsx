@@ -5,7 +5,7 @@ import cementImage from "../assets/cement.jpg"; // replace with your image
 const Home = () => {
   return (
     <section
-      className="home"
+      className="home" id="home"
       style={{ backgroundImage: `url(${cementImage})` }}
     >
       <div className="overlay">
