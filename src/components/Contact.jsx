@@ -26,22 +26,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const subject = encodeURIComponent(`New Contact Form Message from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`
     );
 
-    // Open Gmail compose with prefilled details
-    window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=info@bharathcement.com&su=${subject}&body=${body}`,
-      "_blank"
-    );
+    // Open the default email client (works on desktop, mobile, Gmail app, Outlook, etc.)
+    window.location.href = `mailto:info@bharathcement.com?subject=${subject}&body=${body}`;
   };
 
   return (
     <div className="contact-section">
       <div className="contact-container">
-        
+
         {/* Left: Contact Form */}
         <div className="contact-form">
           <h2>Contact Us</h2>
