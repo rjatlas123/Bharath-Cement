@@ -5,11 +5,12 @@
   padding: 12px 50px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
 }
 
 .navbar-logo {
   display: flex;
-  align-items: center; /* keeps logo and text vertically aligned */
+  align-items: center;
   gap: 10px;
 }
 
@@ -26,7 +27,7 @@
 }
 
 .cement-text {
-  color: #ff6600; /* custom colour for CEMENT */
+  color: #ff6600;
 }
 
 .navbar-links {
@@ -47,4 +48,45 @@
 
 .navbar-links li a:hover {
   color: #007bff;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  /* Side Drawer Menu */
+  .navbar-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden off-screen */
+    width: 250px;
+    background: #fff;
+    padding-top: 80px;
+    gap: 20px;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  /* Show menu when active */
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1000;
+  }
 }

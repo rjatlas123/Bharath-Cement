@@ -16,7 +16,8 @@
 
 .contact-form {
   flex: 1;
-  min-width: 280px; /* Prevents form from shrinking too much */
+  min-width: 280px;
+  width: 70%; /* Prevents form from shrinking too much */
 }
 
 .contact-form h2 {

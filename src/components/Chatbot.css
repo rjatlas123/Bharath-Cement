@@ -105,3 +105,35 @@
   cursor: pointer;
   font-size: 12px;
 }
+
+/* ✅ Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+  .chat-window {
+    width: 90vw;        /* Almost full screen width */
+    height: 75vh;       /* More height for better use */
+    bottom: 80px;       /* Leave space for toggle button */
+    right: 5vw;         
+  }
+
+  .chat-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+    margin-right: 20px;
+  }
+
+  .chat-input input {
+    font-size: 14px;
+  }
+
+  .quick-replies button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .chat-header h3 {
+    font-size: 16px;
+  }
+}
